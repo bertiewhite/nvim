@@ -1,7 +1,6 @@
 local lsp = require('lsp-zero')
 
 lsp.preset('recommended') 
-lsp.setup()
 
 lsp.ensure_installed({
 	'tsserver',
@@ -9,6 +8,7 @@ lsp.ensure_installed({
 	'eslint',
 	'gopls',
     'dockerls', 
+    'lua_ls',
 })
 
 local cmp = require('cmp')
@@ -18,6 +18,16 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
 	['<C-y>'] = cmp.mapping.confirm({select = true }),
 	["<C-space>"] = cmp.mapping.complete(),
+})
+
+lsp.configure("lua_ls", {
+    settings = {
+        Lua = {
+            diagnostic = {
+                globals = { "vim" }
+            }
+        }
+    }
 })
 
 lsp.set_preferences({

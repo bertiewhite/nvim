@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('darrikonn/vim-gofmt', {run = ':GoUpdateBinaries'})
 
   use {
   'VonHeikemen/lsp-zero.nvim',

@@ -178,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bertiewhite/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-gofmt"] = {
+    loaded = true,
+    path = "/Users/bertiewhite/.local/share/nvim/site/pack/packer/start/vim-gofmt",
+    url = "https://github.com/darrikonn/vim-gofmt"
   }
 }
 
